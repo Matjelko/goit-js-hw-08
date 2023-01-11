@@ -25,7 +25,7 @@ if (savedForms) {
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  console.log(localStorage.getItem('feedback-form-state'));
+  console.log(JSON.parse(localStorage.getItem('feedback-form-state'))); 
   email.value = '';
   message.value = '';
   localStorage.removeItem('feedback-form-state');
